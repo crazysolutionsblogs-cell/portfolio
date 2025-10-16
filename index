@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crazy Solutions - Smart Digital Solutions. Crazy Low Prices.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'cyber': ['Orbitron', 'monospace'],
+                        'tech': ['Rajdhani', 'sans-serif']
+                    },
+                    animation: {
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'float': 'float 3s ease-in-out infinite',
+                        'pulse-neon': 'pulse-neon 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @keyframes glow {
+            from { box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff; }
+            to { box-shadow: 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes pulse-neon {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f0f23 100%);
+        }
+        .neon-border {
+            border: 2px solid transparent;
+            background: linear-gradient(45deg, #00ffff, #ff00ff) border-box;
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: exclude;
+            mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="gradient-bg text-white font-tech">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-lg border-b border-cyan-500/30">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-cyber font-bold">
+                    <span class="text-cyan-400">CRAZY</span>
+                    <span class="text-pink-400">SOLUTIONS</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-cyan-400 transition-colors">Home</a>
+                    <a href="#services" class="hover:text-cyan-400 transition-colors">Services</a>
+                    <a href="#why-us" class="hover:text-cyan-400 transition-colors">Why Us</a>
+                    <a href="#portfolio" class="hover:text-cyan-400 transition-colors">Portfolio</a>
+                    <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-pink-500/10"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="animate-float mb-8">
+                <h1 class="text-6xl md:text-8xl font-cyber font-black mb-4">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-400 animate-pulse-neon">
+                        CRAZY
+                    </span>
+                    <br>
+                    <span class="text-white">SOLUTIONS</span>
+                </h1>
+            </div>
+            <p class="text-2xl md:text-3xl font-light mb-8 text-gray-300">
+                Smart Digital Solutions. <span class="text-cyan-400 font-bold">Crazy Low Prices.</span>
+            </p>
+            <p class="text-lg md:text-xl mb-12 text-gray-400 max-w-2xl mx-auto">
+                Transform your business with cutting-edge digital solutions that don't break the bank. 
+                Premium quality at unbeatable prices.
+            </p>
+            <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" 
+                    class="bg-gradient-to-r from-cyan-500 to-pink-500 hover:from-pink-500 hover:to-cyan-500 
+                           px-12 py-4 rounded-full text-xl font-bold transition-all duration-300 
+                           transform hover:scale-105 animate-glow">
+                Get a Free Quote
+            </button>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute top-20 left-10 w-20 h-20 border border-cyan-400 rounded-full animate-float opacity-30"></div>
+        <div class="absolute bottom-20 right-10 w-16 h-16 border border-pink-400 rounded-full animate-float opacity-30" style="animation-delay: 1s;"></div>
+        <div class="absolute top-1/2 left-20 w-12 h-12 bg-gradient-to-r from-cyan-400 to-pink-400 rounded-full animate-float opacity-20" style="animation-delay: 2s;"></div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-cyber font-bold mb-6">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-400">
+                        OUR SERVICES
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Comprehensive digital solutions designed to elevate your business to the next level
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Cards -->
+                <div class="service-card bg-black/40 backdrop-blur-lg p-8 rounded-2xl border border-cyan-500/30 transition-all duration-300">
+                    <div class="text-4xl mb-4 text-cyan-400">📱</div>
+                    <h3 class="text-2xl font-bold mb-4 text-cyan-400">App Development</h3>
+                    <p class="text-gray-400">Native and cross-platform mobile applications that engage users and drive results.</p>
+                </div>
+
+                <div class="service-card bg-black/40 backdrop-blur-lg p-8 rounded-2xl border border-pink-500/30 transition-all duration-300">
+                    <div class="text-4xl mb-4 text-pink-400">🌐</div>
+                    <h3 class="text-2xl font-bold mb-4 text-pink-400">Website Development</h3>
+                    <p class="text-gray-400">Responsive, fast-loading websites that convert visitors into customers.</p>
+                </div>
+
+                <div class="service-card bg-black/40 backdrop-blur-lg p-8 rounded-2xl border border-cyan-500/30 transition-all duration-300">
+                    <div class="text-4xl mb-4 text-cyan-400">🏢</div>
+                    <h3 class="text-2xl font-bold mb-4 text-cyan-400">GMB Profile Management</h3>
+                    <p class="text-gray-400">Optimize your Google My Business presence for maximum local visibility.</p>
+                </div>
+
+                <div class="service-card bg-black/40 backdrop-blur-lg p-8 rounded-2xl border border-pink-500/30 transition-all duration-300">
+                    <div class="text-4xl mb-4 text-pink-400">🔍</div>
+                    <h3 class="text-2xl font-bold mb-4 text-pink-400">SEO Optimization</h3>
+                    <p class="text-gray-400">Rank higher on search engines and attract organic traffic that converts.</p>
+                </div>
+
+                <div class="service-card bg-black/40 backdrop-blur-lg p-8 rounded-2xl border border-cyan-500/30 transition-all duration-300">
+                    <div class="text-4xl mb-4 text-cyan-400">📊</div>
+                    <h3 class="text-2xl font-bold mb-4 text-cyan-400">Social Media Marketing</h3>
+                    <p class="text-gray-400">Engage your audience and build brand loyalty across all social platforms.</p>
+                </div>
+
+                <div class="service-card bg-black/40 backdrop-blur-lg p-8 rounded-2xl border border-pink-500/30 transition-all duration-300">
+                    <div class="text-4xl mb-4 text-pink-400">⚡</div>
+                    <h3 class="text-2xl font-bold mb-4 text-pink-400">SMO & Digital Marketing</h3>
+                    <p class="text-gray-400">Comprehensive digital strategies that maximize your online presence.</p>
+                </div>
+
+                <div class="service-card bg-black/40 backdrop-blur-lg p-8 rounded-2xl border border-cyan-500/30 transition-all duration-300">
+                    <div class="text-4xl mb-4 text-cyan-400">🎯</div>
+                    <h3 class="text-2xl font-bold mb-4 text-cyan-400">Google Ads</h3>
+                    <p class="text-gray-400">Targeted advertising campaigns that deliver measurable ROI.</p>
+                </div>
+
+                <div class="service-card bg-black/40 backdrop-blur-lg p-8 rounded-2xl border border-pink-500/30 transition-all duration-300">
+                    <div class="text-4xl mb-4 text-pink-400">📘</div>
+                    <h3 class="text-2xl font-bold mb-4 text-pink-400">Meta Ads</h3>
+                    <p class="text-gray-400">Facebook and Instagram advertising that reaches your ideal customers.</p>
+                </div>
+
+                <div class="service-card bg-black/40 backdrop-blur-lg p-8 rounded-2xl border border-cyan-500/30 transition-all duration-300">
+                    <div class="text-4xl mb-4 text-cyan-400">🚀</div>
+                    <h3 class="text-2xl font-bold mb-4 text-cyan-400">Growth Strategy</h3>
+                    <p class="text-gray-400">Data-driven strategies to scale your business exponentially.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 relative">
+        <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-pink-500/5"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-cyber font-bold mb-6">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-cyan-400">
+                        WHY CHOOSE US
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    We deliver exceptional results without the premium price tag
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-8 bg-black/30 backdrop-blur-lg rounded-2xl border border-cyan-500/20">
+                    <div class="text-6xl mb-6 text-cyan-400">💰</div>
+                    <h3 class="text-2xl font-bold mb-4 text-cyan-400">Crazy Low Prices</h3>
+                    <p class="text-gray-400">Premium quality services at prices that won't break your budget. We believe great digital solutions should be accessible to everyone.</p>
+                </div>
+
+                <div class="text-center p-8 bg-black/30 backdrop-blur-lg rounded-2xl border border-pink-500/20">
+                    <div class="text-6xl mb-6 text-pink-400">🔍</div>
+                    <h3 class="text-2xl font-bold mb-4 text-pink-400">Full Transparency</h3>
+                    <p class="text-gray-400">No hidden fees, no surprises. Clear communication and honest pricing from day one to project completion.</p>
+                </div>
+
+                <div class="text-center p-8 bg-black/30 backdrop-blur-lg rounded-2xl border border-cyan-500/20">
+                    <div class="text-6xl mb-6 text-cyan-400">📈</div>
+                    <h3 class="text-2xl font-bold mb-4 text-cyan-400">Performance Driven</h3>
+                    <p class="text-gray-400">Results that matter. We focus on metrics that impact your bottom line and drive real business growth.</p>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <div class="bg-gradient-to-r from-cyan-500/10 to-pink-500/10 p-8 rounded-2xl border border-cyan-500/30">
+                    <h3 class="text-3xl font-bold mb-4 text-white">Ready to Transform Your Business?</h3>
+                    <p class="text-xl text-gray-400 mb-6">Join hundreds of satisfied clients who've experienced the Crazy Solutions difference</p>
+                    <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" 
+                            class="bg-gradient-to-r from-pink-500 to-cyan-500 hover:from-cyan-500 hover:to-pink-500 
+                                   px-8 py-3 rounded-full text-lg font-bold transition-all duration-300 
+                                   transform hover:scale-105">
+                        Start Your Project Today
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-cyber font-bold mb-6">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-400">
+                        OUR WORK
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    See how we've helped businesses like yours achieve digital success
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Portfolio Items -->
+                <div class="bg-black/40 backdrop-blur-lg rounded-2xl border border-cyan-500/30 overflow-hidden hover:border-cyan-500/60 transition-all duration-300">
+                    <div class="h-48 bg-gradient-to-br from-cyan-500/20 to-pink-500/20 flex items-center justify-center">
+                        <div class="text-6xl">🚀</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-cyan-400">TechStart Mobile App</h3>
+                        <p class="text-gray-400 mb-4">Complete mobile solution with 300% user engagement increase</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">App Development</span>
+                            <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm">UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-black/40 backdrop-blur-lg rounded-2xl border border-pink-500/30 overflow-hidden hover:border-pink-500/60 transition-all duration-300">
+                    <div class="h-48 bg-gradient-to-br from-pink-500/20 to-cyan-500/20 flex items-center justify-center">
+                        <div class="text-6xl">🌐</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-pink-400">E-Commerce Platform</h3>
+                        <p class="text-gray-400 mb-4">Custom online store with 250% sales increase in 6 months</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm">Web Development</span>
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">SEO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-black/40 backdrop-blur-lg rounded-2xl border border-cyan-500/30 overflow-hidden hover:border-cyan-500/60 transition-all duration-300">
+                    <div class="h-48 bg-gradient-to-br from-cyan-500/20 to-pink-500/20 flex items-center justify-center">
+                        <div class="text-6xl">📊</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-cyan-400">Digital Marketing Campaign</h3>
+                        <p class="text-gray-400 mb-4">Multi-platform strategy delivering 400% ROI</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">Digital Marketing</span>
+                            <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm">Social Media</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonials -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-black/30 backdrop-blur-lg p-8 rounded-2xl border border-cyan-500/20">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-pink-400 rounded-full flex items-center justify-center text-black font-bold">
+                            JS
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-cyan-400">John Smith</h4>
+                            <p class="text-gray-400">CEO, TechStart</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">"Crazy Solutions delivered exactly what they promised - premium quality at an unbeatable price. Our app exceeded all expectations!"</p>
+                </div>
+
+                <div class="bg-black/30 backdrop-blur-lg p-8 rounded-2xl border border-pink-500/20">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-pink-400 to-cyan-400 rounded-full flex items-center justify-center text-black font-bold">
+                            MJ
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-pink-400">Maria Johnson</h4>
+                            <p class="text-gray-400">Founder, StyleHub</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">"The ROI from our digital marketing campaign was incredible. These guys know how to deliver results without breaking the bank."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 relative">
+        <div class="absolute inset-0 bg-gradient-to-r from-pink-500/5 to-cyan-500/5"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-cyber font-bold mb-6">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-cyan-400">
+                        GET IN TOUCH
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Ready to transform your business? Let's discuss your project and get you a free quote
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div class="bg-black/40 backdrop-blur-lg p-8 rounded-2xl border border-cyan-500/30">
+                        <h3 class="text-2xl font-bold mb-6 text-cyan-400">Send us a message</h3>
+                        <form class="space-y-6" onsubmit="handleSubmit(event)">
+                            <div>
+                                <label class="block text-gray-400 mb-2">Name</label>
+                                <input type="text" required class="w-full px-4 py-3 bg-black/50 border border-gray-600 rounded-lg focus:border-cyan-400 focus:outline-none text-white">
+                            </div>
+                            <div>
+                                <label class="block text-gray-400 mb-2">Email</label>
+                                <input type="email" required class="w-full px-4 py-3 bg-black/50 border border-gray-600 rounded-lg focus:border-cyan-400 focus:outline-none text-white">
+                            </div>
+                            <div>
+                                <label class="block text-gray-400 mb-2">Message</label>
+                                <textarea rows="5" required class="w-full px-4 py-3 bg-black/50 border border-gray-600 rounded-lg focus:border-cyan-400 focus:outline-none text-white resize-none"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-gradient-to-r from-cyan-500 to-pink-500 hover:from-pink-500 hover:to-cyan-500 px-8 py-3 rounded-lg font-bold transition-all duration-300 transform hover:scale-105">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="space-y-8">
+                        <div class="bg-black/40 backdrop-blur-lg p-8 rounded-2xl border border-pink-500/30">
+                            <h3 class="text-2xl font-bold mb-6 text-pink-400">Let's Connect</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-pink-400 rounded-full flex items-center justify-center mr-4">
+                                        📧
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-400">Email</p>
+                                        <p class="text-white">contact@crazysolutions.co.in</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 bg-gradient-to-r from-pink-400 to-cyan-400 rounded-full flex items-center justify-center mr-4">
+                                        📱
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-400">Phone</p>
+                                        <p class="text-white">+91 8309477088</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-black/40 backdrop-blur-lg p-8 rounded-2xl border border-cyan-500/30">
+                            <h3 class="text-2xl font-bold mb-6 text-cyan-400">Follow Us</h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <a href="#" class="flex items-center justify-center p-3 bg-blue-600 hover:bg-blue-700 rounded-lg transition-all duration-300 hover:scale-105">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                                    </svg>
+                                    <span class="ml-2 font-semibold">Twitter</span>
+                                </a>
+                                <a href="#" class="flex items-center justify-center p-3 bg-blue-800 hover:bg-blue-900 rounded-lg transition-all duration-300 hover:scale-105">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                    </svg>
+                                    <span class="ml-2 font-semibold">Facebook</span>
+                                </a>
+                                <a href="#" class="flex items-center justify-center p-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 rounded-lg transition-all duration-300 hover:scale-105">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                    </svg>
+                                    <span class="ml-2 font-semibold">Instagram</span>
+                                </a>
+                                <a href="#" class="flex items-center justify-center p-3 bg-blue-700 hover:bg-blue-800 rounded-lg transition-all duration-300 hover:scale-105">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                    </svg>
+                                    <span class="ml-2 font-semibold">LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-cyan-500/30">
+        <div class="container mx-auto px-6 text-center">
+            <div class="text-3xl font-cyber font-bold mb-4">
+                <span class="text-cyan-400">CRAZY</span>
+                <span class="text-pink-400">SOLUTIONS</span>
+            </div>
+            <p class="text-gray-400 mb-6">Smart Digital Solutions. Crazy Low Prices.</p>
+            <p class="text-gray-500">© 2024 Crazy Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for your message! We\'ll get back to you within 24 hours with your free quote.');
+            event.target.reset();
+        }
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-black/40');
+            } else {
+                nav.classList.remove('bg-black/40');
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98f4d32597cf7fa9',t:'MTc2MDU4OTA2Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
