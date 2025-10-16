@@ -273,7 +273,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="bg-black/40 backdrop-blur-lg rounded-2xl border border-cyan-500/30 overflow-hidden hover:border-cyan-500/60 transition-all duration-300">
                     <div class="h-48 bg-gradient-to-br from-cyan-500/20 to-pink-500/20 flex items-center justify-center">
                         <div class="text-6xl">📊</div>
